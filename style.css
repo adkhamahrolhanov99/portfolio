@@ -1,0 +1,79 @@
+:root{
+  --accent1:#ffb300;
+  --accent2:#ff6f00;
+  --bg:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --border:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Arial;
+  color:var(--text);
+  background:var(--bg);
+}
+
+.container{max-width:1000px;margin:0 auto;padding:0 20px}
+
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#fff; box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+.nav .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-weight:800;letter-spacing:.5px}
+.nav a{color:#fff;text-decoration:none;margin-left:16px;opacity:.95}
+.nav a:hover{opacity:1}
+
+.hero{
+  background: linear-gradient(180deg, rgba(255,179,0,.18), rgba(255,111,0,.06));
+  padding:64px 0;
+}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:center}
+h1{font-size:44px;margin:0 0 10px}
+h2{font-size:28px;margin:0 0 8px}
+.sub{color:var(--muted);margin:6px 0 22px}
+
+.accent{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.avatar{width:220px;height:220px;border-radius:50%;border:6px solid var(--accent2);justify-self:center}
+
+.actions{display:flex;gap:12px}
+.btn{
+  display:inline-block;padding:12px 18px;border-radius:8px;
+  background:var(--accent2);color:#fff;text-decoration:none;border:0;cursor:pointer
+}
+.btn:hover{filter:brightness(.95)}
+.btn-outline{background:transparent;border:2px solid var(--accent2);color:var(--accent2)}
+.btn-sm{padding:8px 12px;border-radius:6px}
+
+.section{padding:56px 0}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px; margin-top:18px;
+}
+.card{
+  background:var(--card); border:1px solid var(--border); border-radius:14px;
+  padding:18px; box-shadow:0 4px 18px rgba(0,0,0,.06);
+}
+.card h3{margin:0 0 6px}
+.tags{display:flex;gap:8px;margin:10px 0 16px}
+.tags span{background:#fff1db;border:1px solid #ffd08a;padding:4px 8px;border-radius:999px;font-size:12px}
+.card-actions{display:flex;gap:12px}
+.link{text-decoration:none;color:var(--accent2)}
+
+.about p{max-width:720px}
+
+.footer{padding:24px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .avatar{width:160px;height:160px}
+}
